@@ -1,0 +1,11 @@
+credentials:
+    access_key_id: AKIAJAJLUWEUICR7742Q
+    secret_access_key: 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
+metastore:
+    glue:
+        catalog_id: ""
+    hive:
+        db_location_uri: file:/user/hive/warehouse/
+        uri: ""
+server:
+    endpoint_url: http://www.opendataology.com:30910
