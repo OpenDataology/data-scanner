@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: checksum-deployment
+  labels:
+    app: checksum
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: checksum
+  template:
+    metadata:
+      labels:
+        app: checksum
+    spec:
+      containers:
+      - name: checksum
+        image: kwkeiiking/checksumwebhook:v3
+        ports:
+        - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: checksum-service
+spec:
+  selector:
+    app: checksum
+  type: ClusterIP
+  ports:
+    - port: 8000
+      targetPort: 8000

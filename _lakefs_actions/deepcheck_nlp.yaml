@@ -1,0 +1,10 @@
+name: deepcheck_nlp
+description: deepcheck_nlp
+on:
+  post-commit:
+hooks:
+  - id: deepcheck_nlp
+    type: webhook
+    description: deepcheck_nlp
+    properties:
+      url: "http://119.8.116.2:9259/deepcheck/nlp"

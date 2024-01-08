@@ -1,0 +1,10 @@
+name: checksum
+description: checksum
+on:
+  post-commit:
+hooks:
+  - id: checksum
+    type: webhook
+    description: httpbin data
+    properties:
+      url: "http://checksum-service:8000/checksum"

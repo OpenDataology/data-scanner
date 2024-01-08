@@ -1,0 +1,10 @@
+name: deepcheck_tabular
+description: deepcheck_tabular
+on:
+  post-commit:
+hooks:
+  - id: deepcheck_tabular
+    type: webhook
+    description: deepcheck_tabular
+    properties:
+      url: "http://119.8.116.2:9259/deepcheck/tabular"
